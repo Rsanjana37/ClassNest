@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:subjects/pages/Myhome.dart';
+import 'package:subjects/admin/adminPage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -80,16 +81,3 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class AdminPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Admin Page'),
-      ),
-      body: Center(
-        child: Text('Welcome to the Admin Page!'),
-      ),
-    );
-  }
-}

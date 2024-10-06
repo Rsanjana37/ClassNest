@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:subjects/pages/Loginpage.dart';
+const String geminiAPIkey="AIzaSyCZgAd4zDG-d7b9Zl2-7Nsv-YZsTiIxgMw";
 Future main() async {
-  //Gemini.init(apiKey: geminiAPIkey);
+  Gemini.init(apiKey: geminiAPIkey);
   WidgetsFlutterBinding.ensureInitialized();
   
     await Firebase.initializeApp(

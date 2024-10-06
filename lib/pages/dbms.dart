@@ -16,13 +16,13 @@ class _DbmsPageState extends State<DbmsPage> with SingleTickerProviderStateMixin
   // TextBooks List
   final List<Map<String, String>> textBooks = [
     {
-      "name": "Database System Concepts",
-      "description": "Abraham Silberschatz,Henry F.Korth",
+      "name": "Database System \nConcepts",
+      "description": "Abraham Silberschatz,\nHenry F.Korth",
       "image": f1
     },
     {
-      "name": "Introducing Data Science",
-      "description": "DavyCielen,Arno D.B.Meysman",
+      "name": "NoSQL",
+      "description": "Martin Fowler",
       "image": f2
     },
   ];

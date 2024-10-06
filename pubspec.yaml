@@ -41,6 +41,12 @@ dependencies:
   flutter_document_picker: ^5.2.3
   firebase_auth: ^5.3.1
   cloud_firestore: ^5.4.4
+  syncfusion_flutter_pdfviewer: ^27.1.51
+  file_picker: ^8.1.2
+  image_picker: ^1.1.2
+  pdf_render: ^1.4.7
+  dash_chat_2: ^0.0.21
+  flutter_gemini: ^2.0.5
 
 dev_dependencies:
   flutter_test:

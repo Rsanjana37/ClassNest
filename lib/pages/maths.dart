@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math'; // For animation..not needed for now
+
+import 'package:subjects/pages/viewpdfs.dart'; // For animation..not needed for now
 const String m1 = "lib/assets/Images/mathsbook1.jpg";
 const String m2 = "lib/assets/Images/mathsbook2.jpg";
 const String m3 = "lib/assets/Images/mathsbook3.jpg";
@@ -17,22 +18,26 @@ class _MathsPageState extends State<MathsPage> with SingleTickerProviderStateMix
     {
       "name": "Advanced Engineering\nMathematics",
       "description": "Erwin Kreyszig",
-      "image": m1
+      "image": m1,
+      "url":"https://firebasestorage.googleapis.com/v0/b/subjects-73334.appspot.com/o/Maths%2Fmathspdf1.pdf?alt=media&token=501424c8-495b-49db-b0a4-f023fbbdb07d"
     },
     {
       "name": "Transforms and Partial\nDifferential Equations",
       "description": "Veerarajan. T",
-      "image": m2
+      "image": m2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/subjects-73334.appspot.com/o/Maths%2Fmathspdf2.pdf?alt=media&token=e2ebcb65-6524-4e72-a255-44b7c405d63e"
     },
     {
       "name": "Discrete and\nCombinatorial\nMathematics",
       "description": "Grimaldi, R.P and Ramana, B.V",
-      "image": m3
+      "image": m3,
+      "url":"https://firebasestorage.googleapis.com/v0/b/subjects-73334.appspot.com/o/Maths%2Fmathspdf2.pdf?alt=media&token=e2ebcb65-6524-4e72-a255-44b7c405d63e"
     },
     {
       "name": "Elementary Number\nTheory with \nApplications",
       "description": "Koshy.T",
-      "image": m4
+      "image": m4,
+      "url":"https://firebasestorage.googleapis.com/v0/b/subjects-73334.appspot.com/o/Maths%2Fmathspdf2.pdf?alt=media&token=e2ebcb65-6524-4e72-a255-44b7c405d63e"
     },
   ];
   @override
@@ -62,7 +67,7 @@ class _MathsPageState extends State<MathsPage> with SingleTickerProviderStateMix
                       description: textBooks[index]["description"]!,
                       imageUrl: textBooks[index]["image"]!,
                       onTap: () {
-                       //this on tap should be unique for each textbook- displaying pdf from firebase
+                       Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>viewpdfs(textBooks[index]["url"]!)));
                       },
                     );
                   },
