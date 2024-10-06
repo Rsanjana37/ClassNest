@@ -16,100 +16,103 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purple[50],
-      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 50),
-      child: GridView.count(
-        crossAxisCount: 2,
-        crossAxisSpacing: 16,
-        mainAxisSpacing: 16,
-        children: [
-          buildSubjectCard(
-            "Fourier Series and Number Theory", 
-            "MA23312", 
-            Colors.purple[100]!, 
-            () {
-              // Navigate to Maths page
+    return Scaffold(
+      body: 
+    Container(
+        color: Colors.purple[50],
+        padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 50),
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
+          children: [
+            buildSubjectCard(
+              "Fourier Series and Number Theory", 
+              "MA23312", 
+              Colors.purple[100]!, 
+              () {
+                // Navigate to Maths page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MathsPage()),
+                );
+              },
+            ),
+            buildSubjectCard(
+              "Computer Architecture", 
+              "CS23311", 
+              Colors.purple[200]!, 
+              () {
+                // Handle navigation for Computer Architecture page
+                print("Navigate to Computer Architecture Page");
+              },
+            ),
+            buildSubjectCard(
+              "Design and Analysis of Algorithms", 
+              "CS23331", 
+              Colors.purple[300]!, 
+              () {
+                // Navigate to DAA page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DaaPage()),
+                );
+              },
+            ),
+            buildSubjectCard(
+              "Database Management Systems", 
+              "CS23332", 
+              Colors.purple[400]!, 
+              () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DbmsPage()),
+                );
+              },
+            ),
+            buildSubjectCard(
+              "OOPS using JAVA", 
+              "CS23333", 
+              Colors.purple[500]!, 
+              () {
               Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MathsPage()),
-              );
-            },
-          ),
-          buildSubjectCard(
-            "Computer Architecture", 
-            "CS23311", 
-            Colors.purple[200]!, 
-            () {
-              // Handle navigation for Computer Architecture page
-              print("Navigate to Computer Architecture Page");
-            },
-          ),
-          buildSubjectCard(
-            "Design and Analysis of Algorithms", 
-            "CS23331", 
-            Colors.purple[300]!, 
-            () {
-              // Navigate to DAA page
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DaaPage()),
-              );
-            },
-          ),
-          buildSubjectCard(
-            "Database Management Systems", 
-            "CS23332", 
-            Colors.purple[400]!, 
-            () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DbmsPage()),
-              );
-            },
-          ),
-          buildSubjectCard(
-            "OOPS using JAVA", 
-            "CS23333", 
-            Colors.purple[500]!, 
-            () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => JavaPage()),
-              );
-            },
-          ),
-          buildSubjectCard(
-            "Fundamentals of Data Science", 
-            "CS23334", 
-            Colors.purple[600]!, 
-            () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => FdsPage()),
-              );
-            },
-          ),
-          buildSubjectCard(
-            "OOPS using JAVA", 
-            "CS23333", 
-            Colors.purple[700]!, 
-            () {
-              // Handle navigation for OOPS page (another instance)
-              print("Navigate to OOPS Page (Instance 2)");
-            },
-          ),
-          buildSubjectCard(
-            "Fundamentals of Data Science", 
-            "CS23334", 
-            Colors.purple[800]!, 
-            () {
-              // Handle navigation for Data Science page (another instance)
-              print("Navigate to Data Science Page (Instance 2)");
-            },
-          ),
-        ],
-      ),
+                  context,
+                  MaterialPageRoute(builder: (context) => JavaPage()),
+                );
+              },
+            ),
+            buildSubjectCard(
+              "Fundamentals of Data Science", 
+              "CS23334", 
+              Colors.purple[600]!, 
+              () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FdsPage()),
+                );
+              },
+            ),
+            buildSubjectCard(
+              "OOPS using JAVA", 
+              "CS23333", 
+              Colors.purple[700]!, 
+              () {
+                // Handle navigation for OOPS page (another instance)
+                print("Navigate to OOPS Page (Instance 2)");
+              },
+            ),
+            buildSubjectCard(
+              "Fundamentals of Data Science", 
+              "CS23334", 
+              Colors.purple[800]!, 
+              () {
+                // Handle navigation for Data Science page (another instance)
+                print("Navigate to Data Science Page (Instance 2)");
+              },
+            ),
+          ],
+        ),
+      )
     );
   }
 

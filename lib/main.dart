@@ -1,8 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:subjects/pages/homepage.dart';
-
-//import 'package:subjects/pages/Loginpage.dart';
+import 'package:subjects/pages/Loginpage.dart';
 Future main() async {
   //Gemini.init(apiKey: geminiAPIkey);
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,8 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Firebase',
-      //home: LoginPage(),
-      home: Homepage(),
+      home: LoginPage(),
+      
     );
   }
 }
